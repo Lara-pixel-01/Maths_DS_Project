@@ -5,3 +5,5 @@ for ds in ["FNSPID", "GDELT", "EPA-Air"]:
              and g.loc[g.split == "val", "date_time"].max() < g.loc[g.split == "test", "date_time"].min()
              for _, g in d.groupby("entity_id"))
     print(ds, "train < val < test for every entity:", ok)
+
+#Note: This script is just for checking whether the data is shuffled. After cehcking the output I saw all datasetspassed. No shuffling.
